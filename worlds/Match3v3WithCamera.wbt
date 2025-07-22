@@ -1,0 +1,90 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "../protos/VssReferee.proto"
+EXTERNPROTO "../protos/VssField.proto"
+EXTERNPROTO "../protos/VssBall.proto"
+EXTERNPROTO "../protos/GenericVssRobot.proto"
+EXTERNPROTO "../protos/VssCamera.proto"
+
+WorldInfo {
+  basicTimeStep 10
+  contactProperties [
+    ContactProperties {
+      material1 "base_mat"
+      coulombFriction 0.1
+      maxContactJoints 20
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.2978199444432 0.2978216669116205 0.906976039049452 1.6682845414828267
+  position 0.0023543403159818205 -2.3696378618703475 1.7152698920249012
+}
+DirectionalLight {
+}
+VssReferee {
+}
+VssCamera {
+}
+TexturedBackground {
+}
+VssField {
+}
+VssBall {
+  translation 0 0 0.022
+}
+GenericVssRobot {
+  translation 0.15 0 0.0025
+  rotation 0 0 1 -3.14159
+  name "YellowRobot0"
+  controller "vss_robot_controller"
+  teamColor 1 1 0
+  teamName "yellow"
+  robotNumber 0
+}
+GenericVssRobot {
+  translation 0.3 0.45 0.0025
+  rotation 0 0 1 -3.14159
+  name "YellowRobot1"
+  controller "vss_robot_controller"
+  teamColor 1 1 0
+  robotPrimaryColor 0 1 0
+  robotSecondaryColor 1 0 1
+  teamName "yellow"
+  robotNumber 1
+}
+GenericVssRobot {
+  translation 0.3 -0.45 0.0025
+  rotation 0 0 1 -3.14159
+  name "YellowRobot2"
+  controller "vss_robot_controller"
+  teamColor 1 1 0
+  robotPrimaryColor 0 1 1
+  teamName "yellow"
+  robotNumber 2
+}
+GenericVssRobot {
+  translation -0.15 0 0.0025
+  name "BlueRobot0"
+  controller "vss_robot_controller"
+  teamName "blue"
+  robotNumber 0
+}
+GenericVssRobot {
+  translation -0.3 0.45 0.0025
+  name "BlueRobot1"
+  controller "vss_robot_controller"
+  robotPrimaryColor 0 1 0
+  robotSecondaryColor 1 0 1
+  teamName "blue"
+  robotNumber 1
+}
+GenericVssRobot {
+  translation -0.3 -0.45 0.0025
+  name "BlueRobot2"
+  controller "vss_robot_controller"
+  robotPrimaryColor 0 1 1
+  teamName "blue"
+  robotNumber 2
+}
