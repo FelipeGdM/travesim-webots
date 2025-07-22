@@ -1,0 +1,51 @@
+#VRML_SIM R2025a utf8
+# template language: javascript
+# license: MIT License
+# license url: https://mit-license.org/
+# This is a proto file for Webots for the VssCamera
+
+PROTO VssCamera [
+  field  SFString    name                       "VssCamera"       # Is `Robot.name`.
+  field  SFString    controller                 "camera_controller"       # Is `Robot.name`.
+
+  field  SFVec3f     translation                0 0 2
+  field  SFRotation  rotation                   1 -1 -1 -2.0944
+
+  field  SFFloat     noise                      0
+]
+{
+  Robot {
+    name IS name
+    controller IS controller
+    controllerArgs [
+    ]
+    translation IS translation
+    rotation IS rotation
+    # locked TRUE
+    supervisor TRUE
+    physics NULL
+    children[
+      Shape {
+        appearance PBRAppearance {
+          baseColor 1 0 0
+          roughness 1.000000
+          metalness 0
+        }
+        geometry Box {
+            size 0.2 0.2 0.2
+        }
+      }
+      Camera {
+        noise IS noise
+        fieldOfView 1.0
+        antiAliasing TRUE
+        name "camera"
+        # width 640
+        # height 480
+
+        width 960
+        height 720
+      }
+    ]
+  }
+}
